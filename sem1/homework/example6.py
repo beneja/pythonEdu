@@ -5,8 +5,22 @@
 # Пример:
 # 385916 -> yes
 # 123456 -> no
+def sum3num(x):
+    sum = 0
+    while x != 0:
+        sum += x % 10
+        x //= 10
+    return sum
 
-n_ticket = int(input('введите номер билета'))
-start_prt = int(n_ticket / 1000)
-end_prt = int(n_ticket % 1000)
-print(start_prt, end_prt)
+n_ticket = int(input('введите номер билета: '))
+if n_ticket > 99999 and n_ticket < 1000000:
+    start_prt = int(n_ticket / 1000)
+    end_prt = int(n_ticket % 1000)
+    start_sum = sum3num(start_prt)
+    end_sum = sum3num(end_prt)
+    if start_sum == end_sum:
+        print('счастливый')
+    else:
+        print('в другой раз повезёт')
+else:
+    print('неверный номер')

@@ -8,7 +8,7 @@
 # 60 -> 10 40 10
 sum = int(input('сколько сделали журавликов? '))
 
-if sum in range(6, 240, 6): # 240 условный максимум
+if sum % 6 == 0:
     katya = int(sum * 2 / 3)
     boys = int(sum / 6)
     print(boys, katya, boys)
