@@ -22,6 +22,21 @@
 # Вывод: 12
 
 def Scrabble(word):
-    eu = \
-        {""
+    lib = \
+        {"AEIOULNSTRАВЕИНОРСТ" : 1,
+        "DGДКЛМПУ" : 2,
+        "BCMPБГЁЬЯ" : 3,
+        "FHVWYЙЫ" : 4,
+        "KЖЗХЦЧ" : 5,
+        "JXШЭЮ" : 8,
+        "QZФЩЪ" : 10
         }
+    count = 0
+    for i in word:
+        for key in lib.keys():
+            if i.upper() in key:
+                count += lib[key]
+    return count
+
+word = str(input('Введите слово: '))
+print(Scrabble(word))
