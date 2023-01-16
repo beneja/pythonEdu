@@ -4,7 +4,6 @@
 # Также нельзя использовать циклы.
 def recSum (a, b):
     if b == 0: return a
-    print(a)
     return recSum (a + 1, b - 1)
 a = int(input('введите число: '))
 b = int(input('введите число: '))
