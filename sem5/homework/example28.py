@@ -6,6 +6,6 @@ def recSum (a, b):
     if b == 0: return a
     print(a)
     return recSum (a + 1, b - 1)
-a = int(input('введите число:'))
-b = int(input('введите число:'))
+a = int(input('введите число: '))
+b = int(input('введите число: '))
 print('их сумма равна: ', recSum(a, b))
