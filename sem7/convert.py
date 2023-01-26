@@ -40,15 +40,3 @@ def choise():
     elif format == '2' and item == "3":
         html(fn.read_data_from_file('marshrut.txt'))
 
-# element = fn.read_data_from_file('driver.txt')
-# print(element)
-# style = 'style="font-size:22px;"'
-# html1 = '<html>\n <head></head>\n <body>\n'
-# for item in element:
-#     for element in item:
-#         html1 += '   <p {}>data: {}</p>\n'.format(style, element)
-# html1 += '</body>\n</html>'
-# print(html1)
-# with open('index.html', 'w') as page:
-#         page.write(html1)
-
