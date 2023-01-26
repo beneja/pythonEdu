@@ -1,5 +1,6 @@
 from menu import Menu
 import function as fn
+import convert as cv
 
 if __name__ == "__main__":
     # основной блок
@@ -10,7 +11,8 @@ if __name__ == "__main__":
         ("4", "Добавление водителей", fn.add_driver),
         ("5", "Вывод маршрута", fn.print_route),
         ("6", "Добавление маршрута", fn.add_route),
-        ("7", "Выход", lambda: exit())]
+        ("7", "экспорт в файл", cv.choise),
+        ("8", "Выход", lambda: exit())]
 
     menu = Menu(menuitems)
     menu.run('>:')
