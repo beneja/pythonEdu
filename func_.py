@@ -10,3 +10,8 @@ def Number(text):
     while(not is_digit(number)):
         number = input('ОШИБКА. Попробуйте снова: ')
     return int(number)
+
+def open_file(file_name: str):
+    with open('data.txt', 'r', encoding='utf-8', ) as datafile:
+        result = datafile.read().strip().split('\n')
+    return result
